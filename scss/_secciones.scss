@@ -1,0 +1,248 @@
+// Header
+
+#header.transparent {
+    background-color: rgb(255 255 255 / 9%);
+    backdrop-filter: blur(10px);
+      padding: .5rem;
+}
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: .5rem;
+  background-color: rgba(62, 29, 99, 0);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+
+
+
+.My-Nav{
+    // padding: 20px;
+    // position: fixed;
+    // width: 100%;
+    // background-color: var(--morado-800);
+
+    .nav{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        gap: 31px;
+        border-radius: 50px;
+        background-color: hsl(268.78deg 55.06% 34.9% / 31%);
+        padding: 15px 30px;
+
+    }
+
+    .nav-link {
+
+        --bs-nav-link-color : #fff;
+        --bs-nav-link-font-weight: 300;
+        --bs-nav-link-font-size: 1rem;
+
+        display: block;
+        padding: 8px 16px;
+        font-size: var(--bs-nav-link-font-size);
+        font-weight: var(--bs-nav-link-font-weight);
+        color: var(--bs-nav-link-color);
+        text-decoration: none;
+        background-color: var(--morado-700);
+        border-radius: 40px;
+
+        &:hover{
+            background-color:  var(--morado-800);
+            outline-style: solid;
+            animation: animateOutline 4s ease infinite;
+
+            @keyframes animateOutline {
+                0% {
+                  outline-width: 1px;
+                  outline-offset: 0;
+                  outline-color:  var(--morado-600);
+                }
+              
+                10% {
+                  outline-color:  var(--morado-100);
+                }
+              
+                /* The animation finishes at 50% */
+                50% {
+                  outline-width: 1px;
+                  outline-offset: 2px;
+                  outline-color:  var(--morado-300);
+                }
+              
+                100% {
+                  outline-width: 2px;
+                  outline-offset: 3px;
+                  outline-color:  var(--morado-600);
+                }
+              }
+
+        }
+
+        &.active{
+            background-color: var(--morado-200);
+            
+        }
+   }
+}
+
+
+// HERO
+.s-hero{
+    background-color: var(--morado-500);
+    background: url("../images/hero.png");
+    background-blend-mode: normal;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 85vh;
+    padding-top: 100px;
+
+    .hero-text{
+        position: absolute;
+        left: 99px;
+        bottom: 273px;
+    }
+    
+}
+
+// SERVICIOS
+
+.s-servicios{
+    background-color: var(--gray-50);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+
+.box-servicio{
+    background-color: var(--amarillo-50) ;
+    border-radius: 20px;
+
+    .icon-bg{
+        width: 66px;
+        height: 58px;
+        border-radius: 7px;
+        background-color: var(--morado-600);
+        padding: 20px;
+
+        i{font-size: 1.5rem; color: var(--amarillo-500);}
+
+    }
+}
+
+.s-nosotros{
+    height: 60vh;
+
+    .wrapper{
+        height: 100%;
+    }
+    .AboutUsPhoto{
+        height: 100%;
+         background-image: url("../images/girl.png");
+         background-repeat: no-repeat; 
+         background-size: cover;
+    }
+
+    .AboutUsText{
+        height: 100%;
+    }
+}
+
+
+.s-confianza{
+    background-color: var(--gray-50);
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .confianzaPhoto{
+  
+        img{
+            border-radius: 20px;
+        }
+
+    }
+
+    .confianzaText{
+        height: 100%;
+
+        i{font-size: 1.5rem; color: var(--morado-600); margin-bottom: 20px;} 
+
+    }
+
+    
+
+}
+
+
+.s-clientes{
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+     .box-clientes{
+        background-color: #fff;
+        border-radius: 30px;
+
+     }
+
+     .client-circle{
+        background-color: #fff;
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        img{
+            width: 90%;
+            margin-top: 20px;
+        }
+     }
+}
+
+
+.s-contactanos{
+    background-color: var(--morado-500);
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .box-contactanos{
+        color: #fff;
+        i{font-size: 1.5rem; color: var(--amarillo-500); margin-bottom: 20px;}
+
+    }
+
+    .box-form{
+        padding: 20px;
+        border-radius: 20px;
+        border: 5px solid #FFF134;
+        background: #FFF;
+    }
+}
+
+// whatsapp
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+// .s-footer{
+//     background-color: gray;
+//     height: 300px;
+// }

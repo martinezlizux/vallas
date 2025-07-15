@@ -1,0 +1,30 @@
+// <weight>: Use a value from 300 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+body{
+    color: var(--morado-800);
+}
+
+.t-hero{ font-size: 72px; font-weight: 900; line-height: 100% /* 57.6px */;}
+
+
+.t-display { font-size: 48px; font-weight: 900; line-height: 120% /* 57.6px */;}
+.t-title { font-size: 48px; font-weight: 700; line-height: 120% /* 57.6px */;}
+.t-subtitle { font-size: 48px; font-weight: 300; line-height: 120% /* 57.6px */; }
+
+.t-heading { font-size: 32px; font-weight: 800; line-height: 130% /* 41.6px */; }
+.t-subheading { font-size: 32px; font-weight: 400; line-height: 130% /* 41.6px */; }
+
+.t-bodyLarge { font-size: 22px; font-weight: 400;  line-height: 150% /* 30px */;}
+.t-bodyLarge-Bold { font-size: 22px; font-weight: 700;  line-height: 150% /* 30px */;}
+
+.t-bodyBase { font-size: 16px; font-weight: 500;  line-height: 150% /* 30px */;}
+.t-bodyBase-Bold { font-size: 16px; font-weight: 700;  line-height: 150% /* 30px */;}
+.t-bodyBase-Light { font-size: 16px; font-weight: 300;  line-height: 150% /* 30px */;}
+
+.t-caption { font-size: 12px; font-weight: 700;  line-height: 180% /* 21.6px */; letter-spacing: 4px; text-transform: uppercase;}
+.t-captionsLarge { font-size: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 130% /* 41.6px */; }
+
+.tc-white{ color: #fff;}
+.tc-amarillo{ color: var(--amarillo-500);}
+.tc-morado{ color: var(--morado-800);}

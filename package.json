@@ -1,0 +1,24 @@
+{
+    "name": "Vallas Impacto Movil Digital",
+    "version": "1.0.0",
+    "description": "Vallas Publicitarias en Cancun",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "sass --watch scss:assets/css"
+    },
+     "keywords": [
+     "Publicidad en Vallas",
+        "Vallas en Cancun",
+        "Publicidad Movil en Cancun"
+  ],
+    "author": "Liz Martinez",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.82.0"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.7.2",
+        "animate.css": "^4.1.1",
+        "bootstrap": "^5.3.3"
+    }
+}
