@@ -11964,6 +11964,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+section {
+  overflow: hidden;
+}
+
 #header.transparent {
   background-color: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(10px);
@@ -12044,7 +12048,6 @@ textarea.form-control-lg {
 }
 .s-hero .hero-text {
   position: absolute;
-  left: 99px;
   bottom: 273px;
 }
 
@@ -12070,17 +12073,24 @@ textarea.form-control-lg {
   color: var(--amarillo-500);
 }
 
-.s-nosotros {
-  height: 60vh;
+@media (min-width: 768px) {
+  .s-nosotros {
+    height: 60vh;
+  }
 }
 .s-nosotros .wrapper {
   height: 100%;
 }
 .s-nosotros .AboutUsPhoto {
-  height: 100%;
+  height: 300px;
   background-image: url("../images/girl.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 768px) {
+  .s-nosotros .AboutUsPhoto {
+    height: 100%;
+  }
 }
 .s-nosotros .AboutUsText {
   height: 100%;
@@ -12108,8 +12118,13 @@ textarea.form-control-lg {
 }
 
 .s-clientes {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .s-clientes {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 .s-clientes .box-clientes {
   background-color: #fff;
@@ -12118,7 +12133,7 @@ textarea.form-control-lg {
 .s-clientes .client-circle {
   background-color: #fff;
   border-radius: 100px;
-  width: 200px;
+  width: 100%;
   height: 200px;
   text-align: center;
   overflow: hidden;
@@ -12171,73 +12186,83 @@ body {
 }
 
 .t-hero {
-  font-size: 72px;
+  font-size: 2.5rem;
   font-weight: 900;
   line-height: 100%;
 }
+@media (min-width: 768px) {
+  .t-hero {
+    font-size: 4.5rem;
+  }
+}
 
 .t-display {
-  font-size: 48px;
+  font-size: 2rem;
   font-weight: 900;
   line-height: 120%;
 }
+@media (min-width: 768px) {
+  .t-display {
+    font-size: 3rem;
+  }
+}
 
 .t-title {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 120%;
 }
 
 .t-subtitle {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 300;
   line-height: 120%;
 }
 
 .t-heading {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 130%;
 }
 
 .t-subheading {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 130%;
 }
 
 .t-bodyLarge {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 400;
   line-height: 150%;
 }
 
 .t-bodyLarge-Bold {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 150%;
 }
 
 .t-bodyBase {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 150%;
 }
 
 .t-bodyBase-Bold {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 150%;
 }
 
 .t-bodyBase-Light {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 150%;
 }
 
 .t-caption {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   line-height: 180%;
   letter-spacing: 4px;
@@ -12245,7 +12270,7 @@ body {
 }
 
 .t-captionsLarge {
-  font-size: 20px;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -12281,21 +12306,38 @@ body {
 }
 
 .p-10 {
-  padding: 10px;
+  padding: 5px;
 }
 
 .p-20 {
-  padding: 20px;
+  padding: 10px;
 }
 
 .p-40 {
-  padding: 40px;
+  padding: 20px;
 }
 
 .p-60 {
-  padding: 60px;
+  padding: 30px;
 }
 
+@media (min-width: 768px) {
+  .p-5 {
+    padding: 5px;
+  }
+  .p-10 {
+    padding: 10px;
+  }
+  .p-20 {
+    padding: 20px;
+  }
+  .p-40 {
+    padding: 40px;
+  }
+  .p-60 {
+    padding: 60px;
+  }
+}
 .gradient-1 {
   background: linear-gradient(209deg, #2472FC -29.55%, #8711C1 99.35%);
 }

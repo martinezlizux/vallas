@@ -1,3 +1,10 @@
+
+// Estilos generales de secciones
+
+section{
+    overflow: hidden;
+}
+
 // Header
 
 #header.transparent {
@@ -14,7 +21,6 @@
   transition: background-color 0.3s ease;
   z-index: 1000;
 }
-
 
 
 
@@ -104,11 +110,13 @@
 
     .hero-text{
         position: absolute;
-        left: 99px;
         bottom: 273px;
+
     }
     
 }
+
+
 
 // SERVICIOS
 
@@ -136,16 +144,26 @@
 }
 
 .s-nosotros{
-    height: 60vh;
+    
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { 
+        height: 60vh;
+    }
 
     .wrapper{
         height: 100%;
     }
     .AboutUsPhoto{
-        height: 100%;
+        height: 300px;
          background-image: url("../images/girl.png");
          background-repeat: no-repeat; 
          background-size: cover;
+
+         // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            height: 100%;
+        }
     }
 
     .AboutUsText{
@@ -183,8 +201,16 @@
 
 
 .s-clientes{
-    padding-top: 100px;
-    padding-bottom: 100px;
+
+    padding: 20px;
+
+     // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { 
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    
 
 
      .box-clientes{
@@ -196,7 +222,7 @@
      .client-circle{
         background-color: #fff;
         border-radius: 100px;
-        width: 200px;
+        width: 100%;
         height: 200px;
         text-align: center;
         overflow: hidden;
