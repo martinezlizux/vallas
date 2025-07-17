@@ -12034,7 +12034,7 @@ textarea.form-control-lg {
 
 .s-hero {
   background-color: var(--morado-500);
-  background: url("../images/hero2.png");
+  background: url("../images/hero3.png");
   background-blend-mode: normal;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12262,6 +12262,10 @@ body {
 
 .tc-morado {
   color: var(--morado-800);
+}
+
+.t-shadow {
+  text-shadow: -2px 0px 17px #0d0119;
 }
 
 .b-morado {
