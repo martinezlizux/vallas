@@ -12034,12 +12034,13 @@ textarea.form-control-lg {
 
 .s-hero {
   background-color: var(--morado-500);
-  background: url("../images/hero.png");
+  background: url("../images/hero2.png");
   background-blend-mode: normal;
   background-repeat: no-repeat;
   background-size: cover;
   height: 85vh;
   padding-top: 100px;
+  background-position-y: -110px;
 }
 .s-hero .hero-text {
   position: absolute;
@@ -12090,8 +12091,12 @@ textarea.form-control-lg {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.s-confianza .confianzaPhoto {
+  overflow: hidden;
+}
 .s-confianza .confianzaPhoto img {
   border-radius: 20px;
+  width: 100%;
 }
 .s-confianza .confianzaText {
   height: 100%;

@@ -93,12 +93,14 @@
 // HERO
 .s-hero{
     background-color: var(--morado-500);
-    background: url("../images/hero.png");
+    background: url("../images/hero2.png");
     background-blend-mode: normal;
     background-repeat: no-repeat; 
     background-size: cover;
     height: 85vh;
     padding-top: 100px;
+    background-position-y: -110px;
+
 
     .hero-text{
         position: absolute;
@@ -158,9 +160,12 @@
     padding-bottom: 100px;
 
     .confianzaPhoto{
+        overflow: hidden;
   
         img{
             border-radius: 20px;
+            width: 100%;
+            
         }
 
     }
