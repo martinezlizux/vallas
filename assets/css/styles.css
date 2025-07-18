@@ -1,4 +1,31 @@
 @charset "UTF-8";
+.gemini-animation {
+  color: transparent;
+  background: radial-gradient(circle, #3D4CF4, #ff2862);
+  animation: gemini 5s linear infinite;
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#logoanimation {
+  color: transparent;
+  background: radial-gradient(circle, #3D4CF4, #ff2862);
+  animation: gemini 5s linear infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gemini {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 .btn-my {
   font-size: 16px;
   font-weight: 900;
@@ -11984,14 +12011,34 @@ section {
   z-index: 1000;
 }
 
+.header-logo svg {
+  height: 55px;
+}
+@media (min-width: 768px) {
+  .header-logo svg {
+    height: 63px;
+  }
+}
+
 .My-Nav .nav {
   display: flex;
   align-content: center;
   align-items: center;
-  gap: 31px;
-  border-radius: 50px;
+  gap: 11px;
+  border-radius: 40px;
   background-color: hsla(268.78, 55.06%, 34.9%, 0.31);
-  padding: 15px 30px;
+  padding: 15px 15px;
+}
+@media (min-width: 768px) {
+  .My-Nav .nav {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 31px;
+    border-radius: 50px;
+    background-color: hsla(268.78, 55.06%, 34.9%, 0.31);
+    padding: 15px 30px;
+  }
 }
 .My-Nav .nav-link {
   --bs-nav-link-color: #fff;
@@ -12038,22 +12085,35 @@ section {
 
 .s-hero {
   background-color: var(--morado-500);
-  background: url("../images/hero3.png");
+  background: url("../images/hero-mobile.png");
   background-blend-mode: normal;
   background-repeat: no-repeat;
   background-size: cover;
   height: 85vh;
-  padding-top: 100px;
-  background-position-y: -110px;
+  padding-top: 95px;
+}
+@media (min-width: 768px) {
+  .s-hero {
+    background-color: var(--morado-500);
+    background: url("../images/hero3.png");
+    background-position-y: -110px;
+    background-position-X: 0px;
+  }
 }
 .s-hero .hero-text {
   position: absolute;
-  bottom: 273px;
+  bottom: 433px;
+}
+@media (min-width: 768px) {
+  .s-hero .hero-text {
+    position: absolute;
+    bottom: 273px;
+  }
 }
 
 .s-servicios {
   background-color: var(--gray-50);
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 100px;
 }
 
@@ -12066,11 +12126,13 @@ section {
   height: 58px;
   border-radius: 7px;
   background-color: var(--morado-600);
-  padding: 20px;
 }
 .box-servicio .icon-bg i {
   font-size: 1.5rem;
   color: var(--amarillo-500);
+}
+.box-servicio .icon-bg img {
+  width: 100%;
 }
 
 @media (min-width: 768px) {

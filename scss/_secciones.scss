@@ -22,22 +22,47 @@ section{
   z-index: 1000;
 }
 
+.header-logo{
+    svg{
+        height: 55px;
+
+          // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            height: 63px;
+            
+        }
+    }
+    
+}
+
 
 
 .My-Nav{
-    // padding: 20px;
-    // position: fixed;
-    // width: 100%;
-    // background-color: var(--morado-800);
+   
 
     .nav{
+
         display: flex;
         align-content: center;
-        align-items: center;
-        gap: 31px;
-        border-radius: 50px;
-        background-color: hsl(268.78deg 55.06% 34.9% / 31%);
-        padding: 15px 30px;
+         align-items: center;
+         gap: 11px;
+         border-radius: 40px;
+         background-color: hsla(268.78, 55.06%, 34.9%, 0.31);
+        padding: 15px 15px;
+        
+
+         // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            display: flex;
+            align-content: center;
+            align-items: center;
+            gap: 31px;
+            border-radius: 50px;
+            background-color: hsl(268.78deg 55.06% 34.9% / 31%);
+            padding: 15px 30px;
+        }
+
+            
 
     }
 
@@ -99,20 +124,47 @@ section{
 // HERO
 .s-hero{
     background-color: var(--morado-500);
-    background: url("../images/hero3.png");
+    background: url("../images/hero-mobile.png");
     background-blend-mode: normal;
     background-repeat: no-repeat; 
     background-size: cover;
     height: 85vh;
-    padding-top: 100px;
-    background-position-y: -110px;
+    padding-top: 95px;
+    
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { 
+        background-color: var(--morado-500);
+        background: url("../images/hero3.png");
+        background-position-y: -110px;
+        background-position-X: 0px;
+
+
+        
+    }
+
+
 
 
     .hero-text{
+
+        position: absolute;
+        bottom: 433px;
+        
+
+         // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
         position: absolute;
         bottom: 273px;
 
+
+        
+      }
+
     }
+
+
+    
     
 }
 
@@ -122,7 +174,7 @@ section{
 
 .s-servicios{
     background-color: var(--gray-50);
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
     
 }
@@ -136,9 +188,13 @@ section{
         height: 58px;
         border-radius: 7px;
         background-color: var(--morado-600);
-        padding: 20px;
+        
 
         i{font-size: 1.5rem; color: var(--amarillo-500);}
+
+        img{
+            width: 100%;
+        }
 
     }
 }

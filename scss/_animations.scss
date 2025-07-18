@@ -1,0 +1,30 @@
+.gemini-animation{
+    
+    color: transparent;
+    background: radial-gradient(circle, #3D4CF4,#ff2862);
+
+    animation: gemini 5s linear infinite;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text ;
+    
+}
+
+
+
+#logoanimation{
+     color: transparent;
+    background: radial-gradient(circle, #3D4CF4,#ff2862);
+
+    animation: gemini 5s linear infinite;
+    background-size: 200% 200%;
+    // -webkit-background-clip: text;
+    // background-clip: text ;
+
+}
+
+@keyframes gemini {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%;  }
+    100% { background-position: 0% 0%; ; }
+}
