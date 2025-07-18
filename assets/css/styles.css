@@ -12024,10 +12024,10 @@ section {
   display: flex;
   align-content: center;
   align-items: center;
-  gap: 11px;
+  gap: 9px;
   border-radius: 40px;
   background-color: hsla(268.78, 55.06%, 34.9%, 0.31);
-  padding: 15px 15px;
+  padding: 15px 10px;
 }
 @media (min-width: 768px) {
   .My-Nav .nav {
@@ -12080,7 +12080,11 @@ section {
   }
 }
 .My-Nav .nav-link.active {
-  background-color: var(--morado-200);
+  background-color: #f3d2ff;
+  border: 2px solid;
+  border-color: var(--amarillo-500);
+  color: var(--morado-700);
+  font-weight: 500;
 }
 
 .s-hero {
@@ -12102,12 +12106,33 @@ section {
 }
 .s-hero .hero-text {
   position: absolute;
-  bottom: 433px;
+  top: 120px;
 }
 @media (min-width: 768px) {
   .s-hero .hero-text {
     position: absolute;
     bottom: 273px;
+  }
+}
+
+.s-hero-galeria {
+  background-color: var(--morado-800);
+  height: 40vh;
+  padding-top: 100px;
+}
+@media (min-width: 768px) {
+  .s-hero-galeria {
+    background-color: var(--morado-800);
+  }
+}
+.s-hero-galeria .hero-text {
+  position: absolute;
+  top: 100px;
+}
+@media (min-width: 768px) {
+  .s-hero-galeria .hero-text {
+    position: absolute;
+    top: 140px;
   }
 }
 
@@ -12243,6 +12268,18 @@ section {
   transform: scale(1.1);
 }
 
+.s-galeria .card-img-top {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.s-galeria .card-img-top:hover {
+  transform: scale(1.03);
+}
+.s-galeria .badge {
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
 body {
   color: var(--morado-800);
 }
@@ -12361,6 +12398,10 @@ body {
 
 .b-amarillo {
   background-color: var(--amarillo-500);
+}
+
+.b-gray-200 {
+  background-color: var(--gray-200);
 }
 
 .p-5 {

@@ -45,10 +45,10 @@ section{
         display: flex;
         align-content: center;
          align-items: center;
-         gap: 11px;
-         border-radius: 40px;
-         background-color: hsla(268.78, 55.06%, 34.9%, 0.31);
-        padding: 15px 15px;
+        gap: 9px;
+        border-radius: 40px;
+        background-color: hsla(268.78, 55.06%, 34.9%, 0.31);
+        padding: 15px 10px;
         
 
          // Medium devices (tablets, 768px and up)
@@ -79,6 +79,7 @@ section{
         color: var(--bs-nav-link-color);
         text-decoration: none;
         background-color: var(--morado-700);
+       
         border-radius: 40px;
 
         &:hover{
@@ -114,7 +115,11 @@ section{
         }
 
         &.active{
-            background-color: var(--morado-200);
+                background-color: #f3d2ff;
+                border: 2px solid;
+                border-color: var(--amarillo-500);
+                color: var(--morado-700);
+                font-weight: 500;
             
         }
    }
@@ -138,33 +143,58 @@ section{
         background: url("../images/hero3.png");
         background-position-y: -110px;
         background-position-X: 0px;
-
-
-        
+   
     }
-
-
-
 
     .hero-text{
 
         position: absolute;
-        bottom: 433px;
+        top: 120px;
         
 
          // Medium devices (tablets, 768px and up)
         @media (min-width: 768px) { 
         position: absolute;
         bottom: 273px;
-
-
-        
+ 
       }
 
     }
-
-
     
+}
+
+.s-hero-galeria{
+    background-color: var(--morado-800);
+    // background: url("../images/hero-mobile.png");
+    // background-blend-mode: normal;
+    // background-repeat: no-repeat; 
+    // background-size: cover;
+    height: 40vh;
+    padding-top: 100px;
+    
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { 
+        background-color: var(--morado-800);
+        // background: url("../images/hero3.png");
+        // background-position-y: -110px;
+        // background-position-X: 0px;
+   
+    }
+
+    .hero-text{
+
+        position: absolute;
+        top: 100px;
+
+         // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+        position: absolute;
+        top: 140px;
+ 
+      }
+
+    }
     
 }
 
@@ -328,6 +358,23 @@ section{
 
 .whatsapp-float img:hover {
   transform: scale(1.1);
+}
+
+
+.s-galeria{
+    .card-img-top {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    }
+
+    .card-img-top:hover {
+        transform: scale(1.03);
+    }
+
+    .badge {
+        margin-right: 5px;
+        font-size: 0.8rem;
+    }
 }
 // .s-footer{
 //     background-color: gray;
