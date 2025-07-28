@@ -127,9 +127,9 @@ section{
 
 
 // HERO
-.s-hero{
+.s-hero {
     background-color: var(--morado-500);
-    background: url("../images/hero-mobile.png");
+    background: url("../images/hero-mobile.jpg");
     background-blend-mode: normal;
     background-repeat: no-repeat; 
     background-size: cover;
@@ -140,7 +140,7 @@ section{
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) { 
         background-color: var(--morado-500);
-        background: url("../images/hero3.png");
+        background: url("../images/hero4.jpg");
         background-position-y: -110px;
         background-position-X: 0px;
    
