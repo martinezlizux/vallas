@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Bloquear archivos innecesarios para SEO
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /temp/
+
+# Permitir acceso a imágenes importantes
+Allow: /assets/images/
+Allow: /favicon.png
+Allow: /assets/images/hero2.png
+Allow: /assets/images/logo.svg
+
+# Sitemap
+Sitemap: https://www.motionadsriviera.com/sitemap.xml
+
+# Crawl-delay para ser amigable con los bots
+Crawl-delay: 1
+
+# Bloquear bots maliciosos específicos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
