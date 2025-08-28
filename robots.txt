@@ -8,12 +8,18 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /*.pdf$
 Disallow: /temp/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /package-lock.json
+Disallow: /critical.css
 
 # Permitir acceso a imágenes importantes
 Allow: /assets/images/
 Allow: /favicon.png
+Allow: /favicon.ico
 Allow: /assets/images/hero2.png
 Allow: /assets/images/logo.svg
+Allow: /assets/images/whatsapp.png
 
 # Sitemap
 Sitemap: https://www.motionadsriviera.com/sitemap.xml
@@ -21,9 +27,9 @@ Sitemap: https://www.motionadsriviera.com/sitemap.xml
 # Crawl-delay para ser amigable con los bots
 Crawl-delay: 1
 
-# Bloquear bots maliciosos específicos
-User-agent: AhrefsBot
-Disallow: /
+# Directivas específicas para diferentes bots
+User-agent: Googlebot
+Crawl-delay: 0
 
-User-agent: MJ12bot
-Disallow: /
+User-agent: Bingbot
+Crawl-delay: 1

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Motion Ads Riviera",
+  "url": "https://www.motionadsriviera.com",
+  "logo": "https://www.motionadsriviera.com/assets/images/hero2.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+52-967-130-6561",
+    "contactType": "customer service",
+    "areaServed": ["MX-ROO", "Cancún", "Playa del Carmen", "Riviera Maya"],
+    "availableLanguage": ["Spanish", "English"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cancún",
+    "addressRegion": "Quintana Roo",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 21.1619,
+    "longitude": -86.8515
+  },
+  "sameAs": [
+    "https://www.facebook.com/motionadsriviera",
+    "https://www.instagram.com/motionadsriviera"
+  ],
+  "service": [
+    {
+      "@type": "Service",
+      "name": "Publicidad en Vallas Móviles",
+      "description": "Servicio de publicidad en vallas móviles en Cancún y Playa del Carmen",
+      "areaServed": ["Cancún", "Playa del Carmen", "Riviera Maya"]
+    },
+    {
+      "@type": "Service", 
+      "name": "Perifoneo",
+      "description": "Servicio de perifoneo y publicidad sonora móvil",
+      "areaServed": ["Cancún", "Playa del Carmen", "Riviera Maya"]
+    },
+    {
+      "@type": "Service",
+      "name": "Diseño Web",
+      "description": "Diseño y desarrollo de sitios web para negocios locales",
+      "areaServed": ["Cancún", "Playa del Carmen", "Riviera Maya"]
+    }
+  ]
+}
