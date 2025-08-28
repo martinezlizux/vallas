@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Google Analytics - Motion Ads Riviera</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .test-button { background: #007bff; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; margin: 10px; font-size: 16px; }
+        .test-button:hover { background: #0056b3; }
+        .status { padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 3px; font-family: monospace; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de Google Analytics</h1>
+    <p><strong>ID configurado:</strong> G-WV9XE708CZ</p>
+    
+    <div class="status success">
+        ✅ Google Analytics está configurado y funcionando
+    </div>
+    
+    <div class="status info">
+        📊 Para verificar que funciona:
+        <ol>
+            <li>Abre <a href="https://analytics.google.com" target="_blank">Google Analytics</a></li>
+            <li>Ve a "Tiempo real" > "Visión general"</li>
+            <li>Haz clic en los botones de prueba abajo</li>
+            <li>Deberías ver los eventos en tiempo real</li>
+        </ol>
+    </div>
+    
+    <h2>🎯 Botones de prueba:</h2>
+    
+    <button class="test-button" onclick="testCotizacion()">
+        📋 Probar: Solicitar Cotización
+    </button>
+    
+    <button class="test-button" onclick="testWhatsApp()">
+        📱 Probar: WhatsApp Click
+    </button>
+    
+    <button class="test-button" onclick="testNavigation()">
+        🧭 Probar: Navegación
+    </button>
+    
+    <button class="test-button" onclick="testImageView()">
+        🖼️ Probar: Ver Imagen
+    </button>
+    
+    <div id="results" style="margin-top: 30px;"></div>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV9XE708CZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-WV9XE708CZ', {
+            page_title: 'Test Google Analytics - Motion Ads Riviera',
+            page_location: window.location.href,
+            send_page_view: true,
+            anonymize_ip: true
+        });
+        
+        // Funciones de prueba
+        function testCotizacion() {
+            gtag('event', 'solicitar_cotizacion', {
+                event_category: 'engagement',
+                event_label: 'test_vallas_moviles',
+                value: 1,
+                servicio_interes: 'test_vallas_moviles',
+                ubicacion_cliente: 'test_cancun'
+            });
+            showResult('✅ Evento "Solicitar Cotización" enviado');
+        }
+        
+        function testWhatsApp() {
+            gtag('event', 'whatsapp_click', {
+                event_category: 'contact',
+                event_label: 'test_whatsapp_button',
+                value: 1
+            });
+            showResult('✅ Evento "WhatsApp Click" enviado');
+        }
+        
+        function testNavigation() {
+            gtag('event', 'page_view', {
+                event_category: 'navigation',
+                event_label: 'test_navigation',
+                page_title: 'Test Page',
+                page_location: window.location.href
+            });
+            showResult('✅ Evento "Navegación" enviado');
+        }
+        
+        function testImageView() {
+            gtag('event', 'image_view', {
+                event_category: 'gallery',
+                event_label: 'test_image_campaign',
+                value: 1,
+                pagina_galeria: 'test_portfolio'
+            });
+            showResult('✅ Evento "Ver Imagen" enviado');
+        }
+        
+        function showResult(message) {
+            const results = document.getElementById('results');
+            const div = document.createElement('div');
+            div.className = 'status success';
+            div.innerHTML = message + ' - ' + new Date().toLocaleTimeString();
+            results.appendChild(div);
+            
+            // Scroll to results
+            results.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Test automático al cargar la página
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                showResult('🚀 Página de test cargada - Google Analytics inicializado');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

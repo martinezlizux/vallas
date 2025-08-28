@@ -4,8 +4,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-// Reemplaza 'G-XXXXXXXXXX' con tu ID real de GA4
-gtag('config', 'G-XXXXXXXXXX', {
+ // Google Analytics configurado para Motion Ads Riviera
+gtag('config', 'G-WV9XE708CZ', {
     page_title: 'Motion Ads Riviera - Vallas Móviles Cancún',
     page_location: window.location.href,
     send_page_view: true,
@@ -20,7 +20,7 @@ gtag('config', 'G-XXXXXXXXXX', {
 });
 
 // Enhanced ecommerce tracking para servicios
-gtag('config', 'G-XXXXXXXXXX', {
+gtag('config', 'G-WV9XE708CZ', {
     custom_map: {
         'dimension1': 'tipo_servicio',
         'dimension2': 'ubicacion_servicio',

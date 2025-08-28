@@ -44,62 +44,92 @@
     <link rel="stylesheet" href="./assets/css/fontawesome.css">
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Galería de campañas de publicidad en vallas móviles - Motion Ads Riviera",
+      "url": "https://www.motionadsriviera.com/galeria",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.motionadsriviera.com/imagenes/valla-movil-cancun-campana-elektra.jpg",
+          "description": "Valla móvil en Cancún con campaña publicitaria para Elektra"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.motionadsriviera.com/imagenes/publicidad-valla-movil-playa-del-carmen-restaurante.jpg",
+          "description": "Publicidad en valla móvil en Playa del Carmen para restaurante local"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.motionadsriviera.com/imagenes/campana-valla-movil-cancun-evento-local.jpg",
+          "description": "Campaña de valla móvil en Cancún para evento local"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.motionadsriviera.com/imagenes/publicidad-movil-playa-del-carmen-tienda-elektra.png",
+          "description": "Publicidad en valla móvil en Playa del Carmen para tienda Elektra"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.motionadsriviera.com/imagenes/valla-publicitaria-cancun-anuncio-infinitum.jpeg",
+          "description": "Valla publicitaria móvil en Cancún Infinitum local"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.motionadsriviera.com/imagenes/valla-movil-cancun-campana-sal-la-fina.png",
+          "description": "Valla publicitgaria en Cancun con valla móvil para Sal la Fina"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics 4 -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV9XE708CZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Google Analytics configurado para Motion Ads Riviera - Galería
+        gtag('config', 'G-WV9XE708CZ', {
+            page_title: 'Galería - Motion Ads Riviera',
+            page_location: window.location.href,
+            send_page_view: true,
+            anonymize_ip: true,
+            allow_google_signals: true,
+            allow_ad_personalization_signals: true,
+            custom_map: {
+                'custom_parameter_1': 'pagina_galeria',
+                'custom_parameter_2': 'visualizacion_portfolio'
+            }
+        });
+
+        // Función para rastrear visualización de imágenes
+        function trackImageView(imageName) {
+            gtag('event', 'image_view', {
+                event_category: 'gallery',
+                event_label: imageName,
+                value: 1,
+                pagina_galeria: 'portfolio_campanas'
+            });
+        }
+
+        // Función para rastrear navegación
+        function trackNavigation(page) {
+            gtag('event', 'page_view', {
+                event_category: 'navigation',
+                event_label: page,
+                page_title: document.title,
+                page_location: window.location.href
+            });
+        }
+    </script>
 </head>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ImageGallery",
-  "name": "Galería de campañas de publicidad en vallas móviles - Motion Ads Riviera",
-  "url": "https://www.motionadsriviera.com/galeria",
-  "image": [
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/valla-movil-cancun-campana-gimnasio.png",
-      "description": "Campaña de publicidad en valla móvil en Cancún para gimnasio local"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/publicidad-valla-playa-del-carmen-restaurante.jpeg",
-      "description": "Publicidad en valla móvil en Playa del Carmen para restaurante"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/perifoneo-valla-movil-cancun-farmacia.jpeg",
-      "description": "Perifoneo y valla móvil en Cancún para farmacia local"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/campana-valla-movil-cancun-evento-local.jpg",
-      "description": "Campaña de valla móvil en Cancún para evento local"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/publicidad-movil-playa-del-carmen-tienda-elektra.png",
-      "description": "Publicidad en valla móvil en Playa del Carmen para tienda Elektra"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/valla-publicitaria-cancun-anuncio-infinitum.jpeg",
-      "description": "Valla publicitaria móvil en Cancún Infinitum local"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/valla-movil-cancun-campana-sal-la-fina.png",
-      "description": "Valla publicitgaria en Cancun con valla móvil para Sal la Fina"
-    }
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.motionadsriviera.com/imagenes/valla-movil-cancun-campana-gimnasio-hbo.jpeg",
-      "description": "Valla publicitgaria en Cancun con valla móvil para HBO"
-    }
-
-    
-  ]
-}
-</script>
-
-
 
 <body> 
     <!-- HEADER -->

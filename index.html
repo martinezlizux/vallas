@@ -161,6 +161,59 @@
       }]
     }
     </script>
+
+    <!-- Google Analytics 4 -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Google Analytics configurado para Motion Ads Riviera
+        gtag('config', 'G-WV9XE708CZ', {
+            page_title: 'Motion Ads Riviera - Vallas Móviles Cancún',
+            page_location: window.location.href,
+            send_page_view: true,
+            anonymize_ip: true,
+            allow_google_signals: true,
+            allow_ad_personalization_signals: true,
+            custom_map: {
+                'custom_parameter_1': 'servicio_interes',
+                'custom_parameter_2': 'ubicacion_cliente'
+            }
+        });
+
+        // Función para rastrear solicitudes de cotización
+        function trackCotizacion(servicio = 'general') {
+            gtag('event', 'solicitar_cotizacion', {
+                event_category: 'engagement',
+                event_label: servicio,
+                value: 1,
+                servicio_interes: servicio,
+                ubicacion_cliente: 'cancun_playa_del_carmen'
+            });
+        }
+
+        // Función para rastrear clics en WhatsApp
+        function trackWhatsAppClick() {
+            gtag('event', 'whatsapp_click', {
+                event_category: 'contact',
+                event_label: 'whatsapp_float_button',
+                value: 1
+            });
+        }
+
+        // Función para rastrear navegación
+        function trackNavigation(page) {
+            gtag('event', 'page_view', {
+                event_category: 'navigation',
+                event_label: page,
+                page_title: document.title,
+                page_location: window.location.href
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -168,6 +221,7 @@
         class="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
+        onclick="trackWhatsAppClick()"
         aria-label="Contactar por WhatsApp para cotización de publicidad en vallas móviles">
         <img src="assets/images/whatsapp.png"
             alt="Icono de WhatsApp para contacto directo"
@@ -220,13 +274,13 @@
             <div class="header-menu">
                 <ul class="nav justify-content-center align-middle ">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+                <a class="nav-link active" aria-current="page" href="#" onclick="trackNavigation('nosotros')">Nosotros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="galeria.html">Galeria</a>
+                <a class="nav-link" href="galeria.html" onclick="trackNavigation('galeria')">Galeria</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#s-contactanos" >Contactanos</a>
+                <a class="nav-link" href="#s-contactanos" onclick="trackNavigation('contactanos')">Contactanos</a>
             </li>
         </ul>
             </div>
@@ -245,7 +299,10 @@
                 
                 <h1 class="t-bodyLarge tc-white mt-4 t-shadow">Vallas de Publicidad y Vallas Móviles en Cancún. </h1>
                 <h2 class="t-bodyLarge tc-white t-shadow">Con nosotros tu mensaje llega alto, claro y en movimiento.</h2>
-                <div class="btn  btn-lg btn-primary  btn-rounded mt-4" data-bs-toggle="modal" data-bs-target="#miModal">Solicita tu cotización</div>
+                <div class="btn  btn-lg btn-primary  btn-rounded mt-4"
+                     data-bs-toggle="modal"
+                     data-bs-target="#miModal"
+                     onclick="trackCotizacion('vallas_moviles')">Solicita tu cotización</div>
                 <!-- Botón para abrir modal -->
                 
             </div>
