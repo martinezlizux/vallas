@@ -165,10 +165,15 @@
     <!-- Google Analytics 4 -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV9XE708CZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
+        // Debug: Verificar que gtag se carga correctamente
+        console.log('🔍 Google Analytics: Inicializando...');
+        console.log('🔍 DataLayer:', window.dataLayer);
 
         // Google Analytics configurado para Motion Ads Riviera
         gtag('config', 'G-WV9XE708CZ', {
@@ -181,11 +186,29 @@
             custom_map: {
                 'custom_parameter_1': 'servicio_interes',
                 'custom_parameter_2': 'ubicacion_cliente'
-            }
+            },
+            // Configuraciones adicionales para debugging
+            debug_mode: true,
+            transport_type: 'beacon'
         });
+
+        // Debug: Confirmar configuración
+        console.log('✅ Google Analytics configurado con ID: G-WV9XE708CZ');
+        console.log('📍 URL actual:', window.location.href);
+
+        // Enviar evento de prueba al cargar la página
+        gtag('event', 'page_loaded', {
+            event_category: 'debug',
+            event_label: 'index_page_loaded',
+            value: 1,
+            debug: true
+        });
+
+        console.log('📊 Evento de prueba enviado: page_loaded');
 
         // Función para rastrear solicitudes de cotización
         function trackCotizacion(servicio = 'general') {
+            console.log('🎯 Tracking cotización:', servicio);
             gtag('event', 'solicitar_cotizacion', {
                 event_category: 'engagement',
                 event_label: servicio,
@@ -197,6 +220,7 @@
 
         // Función para rastrear clics en WhatsApp
         function trackWhatsAppClick() {
+            console.log('📱 Tracking WhatsApp click');
             gtag('event', 'whatsapp_click', {
                 event_category: 'contact',
                 event_label: 'whatsapp_float_button',
@@ -206,6 +230,7 @@
 
         // Función para rastrear navegación
         function trackNavigation(page) {
+            console.log('🧭 Tracking navigation:', page);
             gtag('event', 'page_view', {
                 event_category: 'navigation',
                 event_label: page,
@@ -213,6 +238,23 @@
                 page_location: window.location.href
             });
         }
+
+        // Verificar que Google Analytics se carga correctamente
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                if (typeof gtag === 'function') {
+                    console.log('✅ Google Analytics cargado correctamente');
+                    // Enviar evento de confirmación
+                    gtag('event', 'analytics_loaded', {
+                        event_category: 'debug',
+                        event_label: 'ga_successfully_loaded',
+                        value: 1
+                    });
+                } else {
+                    console.error('❌ Error: Google Analytics no se cargó correctamente');
+                }
+            }, 2000);
+        });
     </script>
 </head>
 

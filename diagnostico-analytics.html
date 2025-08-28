@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 Diagnóstico Google Analytics - Motion Ads Riviera</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 1000px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background: #f8f9fa;
+        }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .test-button { 
+            background: #007bff; 
+            color: white; 
+            padding: 12px 25px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin: 8px; 
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .test-button:hover { background: #0056b3; }
+        .status { padding: 15px; margin: 15px 0; border-radius: 8px; }
+        .success { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
+        .error { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
+        .warning { background: #fff3cd; color: #856404; border-left: 4px solid #ffc107; }
+        .info { background: #d1ecf1; color: #0c5460; border-left: 4px solid #17a2b8; }
+        .code { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            border-radius: 5px; 
+            font-family: 'Courier New', monospace; 
+            margin: 10px 0;
+            border: 1px solid #e9ecef;
+            overflow-x: auto;
+        }
+        .log-container { 
+            max-height: 300px; 
+            overflow-y: auto; 
+            background: #000; 
+            color: #00ff00; 
+            padding: 15px; 
+            border-radius: 5px; 
+            font-family: monospace;
+            margin: 15px 0;
+        }
+        .section { margin: 30px 0; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; }
+        h1 { color: #007bff; text-align: center; }
+        h2 { color: #495057; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .metric { background: #f8f9fa; padding: 15px; border-radius: 5px; text-align: center; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #007bff; }
+        .metric-label { font-size: 12px; color: #6c757d; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Diagnóstico Completo de Google Analytics</h1>
+        <p style="text-align: center;"><strong>ID:</strong> G-WV9XE708CZ | <strong>Sitio:</strong> Motion Ads Riviera</p>
+        
+        <div class="section">
+            <h2>📊 Estado del Sistema</h2>
+            <div id="system-status">
+                <div class="info">🔄 Verificando configuración...</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🧪 Pruebas de Eventos</h2>
+            <div class="grid">
+                <button class="test-button" onclick="testPageView()">📄 Page View</button>
+                <button class="test-button" onclick="testCotizacion()">📋 Cotización</button>
+                <button class="test-button" onclick="testWhatsApp()">📱 WhatsApp</button>
+                <button class="test-button" onclick="testNavigation()">🧭 Navegación</button>
+                <button class="test-button" onclick="testCustomEvent()">⚡ Evento Custom</button>
+                <button class="test-button" onclick="testConversion()">🎯 Conversión</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📈 Métricas en Tiempo Real</h2>
+            <div class="grid">
+                <div class="metric">
+                    <div class="metric-value" id="events-sent">0</div>
+                    <div class="metric-label">Eventos Enviados</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="page-views">0</div>
+                    <div class="metric-label">Page Views</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="conversions">0</div>
+                    <div class="metric-label">Conversiones</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="session-time">0s</div>
+                    <div class="metric-label">Tiempo Sesión</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Información Técnica</h2>
+            <div class="code" id="tech-info">Cargando información técnica...</div>
+        </div>
+
+        <div class="section">
+            <h2>📝 Log de Eventos</h2>
+            <div class="log-container" id="event-log">
+                <div>🚀 Sistema de diagnóstico iniciado...</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Soluciones Comunes</h2>
+            <div class="info">
+                <h4>Si Google Analytics no recibe datos:</h4>
+                <ol>
+                    <li><strong>Verifica el dominio:</strong> GA4 funciona mejor en dominios reales (no localhost)</li>
+                    <li><strong>Desactiva bloqueadores:</strong> AdBlock, uBlock Origin pueden bloquear GA</li>
+                    <li><strong>Usa HTTPS:</strong> Algunos navegadores bloquean tracking en HTTP</li>
+                    <li><strong>Espera 24-48 horas:</strong> Los datos pueden tardar en aparecer</li>
+                    <li><strong>Verifica en Tiempo Real:</strong> Ve a GA4 > Informes > Tiempo real</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Analytics 4 con debugging avanzado -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV9XE708CZ"></script>
+    <script>
+        // Variables globales para métricas
+        let eventsSent = 0;
+        let pageViews = 0;
+        let conversions = 0;
+        let sessionStart = Date.now();
+
+        // Configuración de Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Configuración con debugging
+        gtag('config', 'G-WV9XE708CZ', {
+            page_title: 'Diagnóstico GA - Motion Ads Riviera',
+            page_location: window.location.href,
+            send_page_view: true,
+            anonymize_ip: true,
+            allow_google_signals: true,
+            allow_ad_personalization_signals: true,
+            debug_mode: true,
+            transport_type: 'beacon',
+            custom_map: {
+                'custom_parameter_1': 'diagnostico_test',
+                'custom_parameter_2': 'debugging_session'
+            }
+        });
+
+        // Funciones de logging
+        function logEvent(message, type = 'info') {
+            const log = document.getElementById('event-log');
+            const timestamp = new Date().toLocaleTimeString();
+            const colors = {
+                info: '#00ff00',
+                success: '#00ff00',
+                error: '#ff0000',
+                warning: '#ffff00'
+            };
+            
+            log.innerHTML += `<div style="color: ${colors[type]}">[${timestamp}] ${message}</div>`;
+            log.scrollTop = log.scrollHeight;
+            console.log(`[GA Debug] ${message}`);
+        }
+
+        function updateMetrics() {
+            document.getElementById('events-sent').textContent = eventsSent;
+            document.getElementById('page-views').textContent = pageViews;
+            document.getElementById('conversions').textContent = conversions;
+            document.getElementById('session-time').textContent = Math.floor((Date.now() - sessionStart) / 1000) + 's';
+        }
+
+        // Funciones de prueba
+        function testPageView() {
+            gtag('event', 'page_view', {
+                page_title: 'Test Page View',
+                page_location: window.location.href,
+                event_category: 'test',
+                event_label: 'manual_page_view_test'
+            });
+            eventsSent++;
+            pageViews++;
+            logEvent('✅ Page View enviado', 'success');
+            updateMetrics();
+        }
+
+        function testCotizacion() {
+            gtag('event', 'solicitar_cotizacion', {
+                event_category: 'engagement',
+                event_label: 'test_vallas_moviles',
+                value: 1,
+                servicio_interes: 'test_vallas_moviles',
+                ubicacion_cliente: 'test_cancun'
+            });
+            eventsSent++;
+            conversions++;
+            logEvent('✅ Evento Cotización enviado', 'success');
+            updateMetrics();
+        }
+
+        function testWhatsApp() {
+            gtag('event', 'whatsapp_click', {
+                event_category: 'contact',
+                event_label: 'test_whatsapp_button',
+                value: 1
+            });
+            eventsSent++;
+            conversions++;
+            logEvent('✅ Evento WhatsApp enviado', 'success');
+            updateMetrics();
+        }
+
+        function testNavigation() {
+            gtag('event', 'navigate', {
+                event_category: 'navigation',
+                event_label: 'test_menu_click',
+                page_title: document.title,
+                page_location: window.location.href
+            });
+            eventsSent++;
+            logEvent('✅ Evento Navegación enviado', 'success');
+            updateMetrics();
+        }
+
+        function testCustomEvent() {
+            gtag('event', 'custom_test_event', {
+                event_category: 'testing',
+                event_label: 'diagnostic_custom_event',
+                value: Math.floor(Math.random() * 100),
+                custom_parameter_1: 'test_value',
+                test_timestamp: Date.now()
+            });
+            eventsSent++;
+            logEvent('✅ Evento Custom enviado', 'success');
+            updateMetrics();
+        }
+
+        function testConversion() {
+            gtag('event', 'conversion', {
+                event_category: 'conversion',
+                event_label: 'test_conversion_event',
+                value: 1,
+                currency: 'MXN'
+            });
+            eventsSent++;
+            conversions++;
+            logEvent('✅ Evento Conversión enviado', 'success');
+            updateMetrics();
+        }
+
+        // Verificaciones del sistema
+        function checkSystem() {
+            const statusDiv = document.getElementById('system-status');
+            const techDiv = document.getElementById('tech-info');
+            
+            let status = '';
+            let techInfo = '';
+
+            // Verificar gtag
+            if (typeof gtag === 'function') {
+                status += '<div class="success">✅ Google Analytics cargado correctamente</div>';
+                logEvent('✅ gtag function disponible', 'success');
+            } else {
+                status += '<div class="error">❌ Error: Google Analytics no se cargó</div>';
+                logEvent('❌ gtag function no disponible', 'error');
+            }
+
+            // Verificar dataLayer
+            if (window.dataLayer && Array.isArray(window.dataLayer)) {
+                status += '<div class="success">✅ DataLayer inicializado</div>';
+                logEvent('✅ DataLayer disponible', 'success');
+            } else {
+                status += '<div class="error">❌ Error: DataLayer no disponible</div>';
+                logEvent('❌ DataLayer no disponible', 'error');
+            }
+
+            // Verificar protocolo
+            if (location.protocol === 'https:') {
+                status += '<div class="success">✅ Sitio en HTTPS</div>';
+            } else {
+                status += '<div class="warning">⚠️ Sitio en HTTP - GA4 funciona mejor en HTTPS</div>';
+            }
+
+            // Información técnica
+            techInfo = `
+                <strong>URL:</strong> ${window.location.href}<br>
+                <strong>User Agent:</strong> ${navigator.userAgent}<br>
+                <strong>Protocolo:</strong> ${location.protocol}<br>
+                <strong>Host:</strong> ${location.host}<br>
+                <strong>DataLayer Items:</strong> ${window.dataLayer ? window.dataLayer.length : 0}<br>
+                <strong>Cookies Habilitadas:</strong> ${navigator.cookieEnabled ? 'Sí' : 'No'}<br>
+                <strong>Do Not Track:</strong> ${navigator.doNotTrack || 'No establecido'}<br>
+                <strong>Timestamp:</strong> ${new Date().toISOString()}
+            `;
+
+            statusDiv.innerHTML = status;
+            techDiv.innerHTML = techInfo;
+        }
+
+        // Inicialización
+        window.addEventListener('load', function() {
+            logEvent('🚀 Página cargada completamente', 'info');
+            
+            setTimeout(() => {
+                checkSystem();
+                
+                // Enviar evento inicial
+                gtag('event', 'diagnostic_page_loaded', {
+                    event_category: 'diagnostic',
+                    event_label: 'system_check_completed',
+                    value: 1
+                });
+                eventsSent++;
+                logEvent('📊 Evento inicial enviado', 'info');
+                updateMetrics();
+                
+                // Actualizar métricas cada segundo
+                setInterval(updateMetrics, 1000);
+                
+            }, 2000);
+        });
+
+        // Log de errores
+        window.addEventListener('error', function(e) {
+            logEvent(`❌ Error: ${e.message}`, 'error');
+        });
+
+        // Interceptar llamadas a gtag para debugging
+        const originalGtag = window.gtag;
+        window.gtag = function() {
+            if (arguments[0] === 'event') {
+                logEvent(`📤 Enviando evento: ${arguments[1]}`, 'info');
+            }
+            return originalGtag.apply(this, arguments);
+        };
+    </script>
+</body>
+</html>
